@@ -6,6 +6,7 @@ import Double from "./components/Double";
 import Reset from "./components/Reset";
 import UserComponent from "./components/UserComponent";
 import DummyButton from "./components/DummyButton";
+import Alert from "./components/Alert";
 
 function App() {
 	console.log("rendering <App />");
@@ -19,6 +20,7 @@ function App() {
 			<Increment />
 			<Double />
 			<Reset />
+			<Alert />
 			{[...Array(10)].map((_, i) => (
 				<UserComponent userId={i + 1} key={i} />
 			))}

@@ -1,8 +1,15 @@
-import { atom, atomFamily } from "recoil";
+import { atom, atomFamily, selector } from "recoil";
 
 export const counterState = atom<number>({
 	key: "counterState",
 	default: 0,
+});
+
+export const isCounterGreaterThanMil = selector<boolean>({
+	key: "isCounterGreaterThanMil",
+	get: ({ get }) => {
+		return get(counterState) > 1000000;
+	},
 });
 
 // Define the types
